@@ -9,8 +9,8 @@ export const doctorApi = createApi({
     }),
     tagTypes: ["Doctors"],
     endpoints: (build) => ({
-        fetchAllDoctors: build.query<IDoctor[], number>({
-            query: (limit: number = -1) => ({
+        fetchAllDoctors: build.query<IDoctor[], void>({
+            query: () => ({
                 url: `/doctors`,
             }),
             providesTags: ["Doctors"],

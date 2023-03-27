@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link, useLocation, useRouteError } from "react-router-dom";
-import { Header } from "../ui/Header";
 import { Button } from "../ui/Button";
 
-interface ErrorPageProps {
-}
-
-export default function ErrorPage(props: ErrorPageProps): JSX.Element {
+export default function ErrorPage(): JSX.Element {
     const routeError: any = useRouteError();
     const { state } = useLocation();
     const { error } = state;

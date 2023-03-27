@@ -9,8 +9,8 @@ export const appointmentApi = createApi({
     }),
     tagTypes: ["Appointments"],
     endpoints: (build) => ({
-        fetchAllAppointments: build.query<IAppointment[], number>({
-            query: (limit: number = -1) => ({
+        fetchAllAppointments: build.query<IAppointment[], void>({
+            query: () => ({
                 url: `/appointments`,
             }),
             providesTags: ["Appointments"],

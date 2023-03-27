@@ -9,8 +9,8 @@ export const medicalRecordApi = createApi({
     }),
     tagTypes: ["MedicalRecords"],
     endpoints: (build) => ({
-        fetchAllMedicalRecords: build.query<IMedicalRecord[], number>({
-            query: (limit: number = -1) => ({
+        fetchAllMedicalRecords: build.query<IMedicalRecord[], void>({
+            query: () => ({
                 url: `/medical-records`,
             }),
             providesTags: ["MedicalRecords"],
