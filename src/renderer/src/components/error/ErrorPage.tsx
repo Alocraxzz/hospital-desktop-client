@@ -5,7 +5,7 @@ import { Button } from "../ui/Button";
 export default function ErrorPage(): JSX.Element {
     const routeError: any = useRouteError();
     const { state } = useLocation();
-    const { error } = state;
+    const { error } = state ?? {};
 
     useEffect(() => {
         console.log(routeError);
