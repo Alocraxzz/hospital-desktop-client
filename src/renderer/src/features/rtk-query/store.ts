@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
     [medicalRecordApi.reducerPath]: medicalRecordApi.reducer,
 });
 
-const store = configureStore({
+export const store = configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
@@ -23,5 +23,3 @@ const store = configureStore({
 });
 
 setupListeners(store.dispatch);
-
-export default store;
