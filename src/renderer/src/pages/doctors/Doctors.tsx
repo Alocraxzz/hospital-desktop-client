@@ -23,7 +23,7 @@ export const Doctors = () => {
     if (error) {
         navigate('/error', {
             state: {
-                error: 'Fail to load patients info'
+                error: 'Fail to load doctors info'
             }
         });
 
