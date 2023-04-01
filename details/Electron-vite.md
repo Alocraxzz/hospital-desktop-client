@@ -29,7 +29,7 @@ pnpm create @quick-start/electron
 > - **YARN:** Yarn uses the same flatten node_modules directory but is comparable to NPM in regards to speed and installs packages parallely.
 > - **PNPM:** PNPM is **3 times faster** and more efficient than NPM.  With both cold and hot cache, PNPM is faster than Yarn.
 >
-> [Детальніше](https://www.atatus.com/blog/npm-vs-yarn-vs-pnpm/)
+> [**Детальніше**](https://www.atatus.com/blog/npm-vs-yarn-vs-pnpm/)
 
 #### Приклад з pnpm:
 
