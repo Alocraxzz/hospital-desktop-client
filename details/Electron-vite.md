@@ -24,7 +24,7 @@ pnpm create @quick-start/electron
 
 #### *Коротко про різницю між цими пакетними менеджерами:*
 
-> [!NOTE] ***NPM Vs YARN Vs PNPM Comparison***
+> ***NPM Vs YARN Vs PNPM Comparison***
 > - **NPM:** It is bit slower when compared to Yarn and PNPM.
 > - **YARN:** Yarn uses the same flatten node_modules directory but is comparable to NPM in regards to speed and installs packages parallely.
 > - **PNPM:** PNPM is **3 times faster** and more efficient than NPM.  With both cold and hot cache, PNPM is faster than Yarn.
