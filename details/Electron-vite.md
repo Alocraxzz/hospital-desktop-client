@@ -2,7 +2,7 @@
 
 #### Перейдемо в розділ [get started](https://vitejs.dev/guide/)
 
-#### Ініціалізуємо проект:
+#### Ініціалізуємо проект
 
 With NPM
 
@@ -22,7 +22,7 @@ With PNPM
 pnpm create @quick-start/electron
 ```
 
-#### *Коротко про різницю між цими пакетними менеджерами:*
+#### *Коротко про різницю між цими пакетними менеджерами*
 
 > ***NPM Vs YARN Vs PNPM Comparison***
 > - **NPM:** It is bit slower when compared to Yarn and PNPM.
@@ -31,7 +31,7 @@ pnpm create @quick-start/electron
 >
 > [**Детальніше**](https://www.atatus.com/blog/npm-vs-yarn-vs-pnpm/)
 
-#### Приклад з pnpm:
+#### Приклад з pnpm
 
 With PNPM
 
@@ -52,7 +52,7 @@ Scaffolding project in ./<electron-app>...
 Done.
 ```
 
-#### В залежності від структури проекту обираємо необхідні параметри. На даний момент підтримуються такі шаблони:
+#### В залежності від структури проекту обираємо необхідні параметри. На даний момент підтримуються такі шаблони
 | JavaScript                                                                                                 | TypeScript                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | [vanilla](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/vanilla) | [vanilla-ts](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/vanilla-ts) |
@@ -61,7 +61,7 @@ Done.
 | [svelte](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/svelte)   | [svelte-ts](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/svelte-ts)   |
 | [solid](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/solid)     | [solid-ts](https://github.com/alex8088/quick-start/tree/master/packages/create-electron/playground/solid-ts)     | 
 
-#### Структура шаблону:
+#### Структура шаблону
 
 ```
 ./src/renderer/        - містить файли проекту (React, Vue ...)
