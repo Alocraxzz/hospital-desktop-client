@@ -4,11 +4,27 @@
 
 #### Ініціалізуємо проект:
 
-![[Pasted image 20230401232055.png]]
+With NPM
+
+```
+npm create @quick-start/electron
+```
+
+With Yarn
+
+```
+yarn create @quick-start/electron
+```
+
+With PNPM
+
+```
+pnpm create @quick-start/electron
+```
 
 #### *Коротко про різницю між цими пакетними менеджерами:*
 
-> ***NPM Vs YARN Vs PNPM Comparison***
+> [!NOTE] ***NPM Vs YARN Vs PNPM Comparison***
 > - **NPM:** It is bit slower when compared to Yarn and PNPM.
 > - **YARN:** Yarn uses the same flatten node_modules directory but is comparable to NPM in regards to speed and installs packages parallely.
 > - **PNPM:** PNPM is **3 times faster** and more efficient than NPM.  With both cold and hot cache, PNPM is faster than Yarn.
@@ -17,7 +33,24 @@
 
 #### Приклад з pnpm:
 
-![[Pasted image 20230401232413.png]]
+With PNPM
+
+```
+pnpm create @quick-start/electron
+```
+
+Then follow the prompts!
+
+```
+✔ Project name: … <electron-app>
+✔ Select a framework: › vue
+✔ Add TypeScript? … No / Yes
+✔ Add Electron updater plugin? … No / Yes
+✔ Enable Electron download mirror proxy? … No / Yes
+
+Scaffolding project in ./<electron-app>...
+Done.
+```
 
 #### В залежності від структури проекту обираємо необхідні параметри. На даний момент підтримуються такі шаблони:
 | JavaScript                                                                                                 | TypeScript                                                                                                       |
@@ -30,8 +63,6 @@
 
 #### Структура шаблону:
 
-![[Pasted image 20230401233653.png]]
-
 ```
 ./src/renderer/        - містить файли проекту (React, Vue ...)
 ./src/preload/index.ts - файл конфігурації для electron
@@ -43,14 +74,19 @@
 
 #### Шаблон включає готові скрипти для сбірки проекту
 
-![[Pasted image 20230401234133.png]]
-
-#### Запустимо проект в режимі preview (збірка та запуск)
-
+```js
+"scripts": {  
+  "format": "prettier --write .",  
+  "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",  
+  "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",  
+  "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",  
+  "typecheck": "npm run typecheck:node && npm run typecheck:web",  
+  "start": "electron-vite preview",  
+  "dev": "electron-vite dev",  
+  "build": "npm run typecheck && electron-vite build",  
+  "postinstall": "electron-builder install-app-deps",  
+  "build:win": "npm run build && electron-builder --win --config",  
+  "build:mac": "electron-vite build && electron-builder --mac --config",  
+  "build:linux": "electron-vite build && electron-builder --linux --config"  
+},
 ```
-npm run preview
-```
-
-#### Результат:
-
-![[Pasted image 20230401233939.png]]
