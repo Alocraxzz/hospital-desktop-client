@@ -66,7 +66,7 @@ Done.
 ```
 ./src/renderer/        - містить файли проекту (React, Vue ...)
 ./src/preload/index.ts - файл конфігурації для electron
-./src/main/index.ts    - головний файл electron
+./src/main/index.ts    - точка входу для electron
 ./src/resources/       - папка для статичних файлів
 ./src/out/             - папка з ресурсами сбірки
 .src/build/            - папка з статичними даними збірки, налаштування безпеки
